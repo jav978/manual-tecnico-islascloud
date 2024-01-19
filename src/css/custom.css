@@ -1,0 +1,203 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'font-awesome/css/font-awesome.min.css';
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #014ba0;
+  --ifm-color-primary-dark: #014390;
+  --ifm-color-primary-darker: #014088;
+  --ifm-color-primary-darkest: #013470;
+  --ifm-color-primary-light: #0152b0;
+  --ifm-color-primary-lighter: #0156b8;
+  --ifm-color-primary-lightest: #0161d0;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #0cb7f2;
+  --ifm-color-primary-dark: #0ba5da;
+  --ifm-color-primary-darker: #0a9cce;
+  --ifm-color-primary-darkest: #0880a9;
+  --ifm-color-primary-light: #23bff4;
+  --ifm-color-primary-lighter: #2fc2f5;
+  --ifm-color-primary-lightest: #54cdf7;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+
+
+font-face {
+  font-family: Handel Gothic D, HandelGotD-Ligh, sans-serif;
+  src: local('HandleGothicDRegular'), local('HandleGothicD'),local('HandelGotD-Ligh'),
+       url(/font/HandelGothiDRegular.ttf) ,
+       url(/font/HandelGothicRegular.ttf),
+       url(/font/HandelGotDLig.ttf),
+       format('ttf'),
+      
+  /* Agrega más formatos según sea necesario */
+}
+
+.coloBadge{
+  background-color: #666666;
+  padding: 10px;
+  border-radius: 50px;
+  color:white;
+  font-weight: bold;
+  font-size: 10px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+
+/* Iconons */
+
+.navbar__icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+.navbar__github {
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  transition: background var(--ifm-transition-fast);
+}
+.zoom {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.zoom img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.zoom:hover img {
+  transform: scale(1.2);
+}
+html[data-theme='light'] .navbar__github {
+  color: #000;
+}
+
+html[data-theme='dark'] .navbar__github {
+  color: #fff;
+}
+
+.navbar__github:hover {
+  background: var(--ifm-color-emphasis-200);
+}
+
+
+.shadow-sm{
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+
+b {
+  font-family:'Handel Gothic D',sans-serif;
+  font-size: 1.6rem; 
+
+} 
+
+
+.tituloIslasCloud {
+  font-family:'Handel Gothic D',sans-serif; 
+  font-size: 1.5rem; 
+  font-weight: bolder;
+
+}
+
+.tituloIslasCloudnormal {
+  font-family:'Handel Gothic D',sans-serif;
+  font-weight: normal !important;
+  font-size: 1.4rem; 
+
+} 
+
+.markdown :not(em) > img[src$=".png"],
+.markdown :not(em) > img[src$=".jpg"] {
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  /* transition: transform 0.3s; */
+  /* transition: border-color 0.3s; */
+ 
+}
+
+.markdown :not(em) > img[src$=".png"]:hover,
+.markdown :not(em) > img[src$=".jpg"]:hover {
+   transform: scale(1.05); 
+  box-shadow: 0 0 5px 2px #7540bd;
+}
+
+
+#content .card{
+  place-items: center;
+  align-items: center;
+}
+
+
+.title{
+  
+  font-weight: medium;
+  font-family:'Handel Gothic D',sans-serif;
+  font-size: 2.8rem;
+}
+
+
+.ptitle{  
+  font-weight: medium !important;
+  font-family:'Handel Gothic D';
+  font-size: 1.5rem;
+}
+
+.spantitle{
+  font-weight: bold !important;
+}
+.card{
+  padding: 20px;
+  place-content: center;
+}
+
+
+.features_src-components-HomepageFeatures-styles-module{
+  background-image:  linear-gradient(rgba(0, 0, 255, 0.2), rgba(255, 255, 0, 0.2)),
+  url("../../static/img/image1.png")  ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; 
+  align-items: center;
+  margin:auto; 
+  width: 100vw;
+  height: 32.65vh;
+  overflow: hidden;
+  
+}
+/* 
+.highligh-content-aling{
+  
+} */
+.footer{
+  height: 11rem;
+  padding-bottom: 8px;
+}
+
+.video{
+  box-shadow: 0 8px 4px 0 rgb(0 0 0 / 0.  5);
+}
+
+/* Estilos para tabletas y teléfonos */
+@media (max-width: 767px) {
+  .video {
+    width: 100%; /* Ajusta el ancho al 100% para dispositivos más pequeños */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+  }
+}
